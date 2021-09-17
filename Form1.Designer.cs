@@ -39,7 +39,7 @@ namespace CurrencyProjeForm
             this.LblGetEuro = new System.Windows.Forms.Label();
             this.LblSellEuro = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.BtnSell = new System.Windows.Forms.Button();
+            this.BtnCalc1 = new System.Windows.Forms.Button();
             this.TxtRemain = new System.Windows.Forms.TextBox();
             this.TxtTotal = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -52,6 +52,7 @@ namespace CurrencyProjeForm
             this.BtnSellDollars = new System.Windows.Forms.Button();
             this.BtnGetEuro = new System.Windows.Forms.Button();
             this.BtnSellEuro = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -146,7 +147,8 @@ namespace CurrencyProjeForm
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.BtnSell);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.BtnCalc1);
             this.groupBox1.Controls.Add(this.TxtRemain);
             this.groupBox1.Controls.Add(this.TxtTotal);
             this.groupBox1.Controls.Add(this.label12);
@@ -162,14 +164,15 @@ namespace CurrencyProjeForm
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Banking";
             // 
-            // BtnSell
+            // BtnCalc1
             // 
-            this.BtnSell.Location = new System.Drawing.Point(183, 201);
-            this.BtnSell.Name = "BtnSell";
-            this.BtnSell.Size = new System.Drawing.Size(120, 48);
-            this.BtnSell.TabIndex = 18;
-            this.BtnSell.Text = "Sell";
-            this.BtnSell.UseVisualStyleBackColor = true;
+            this.BtnCalc1.Location = new System.Drawing.Point(36, 215);
+            this.BtnCalc1.Name = "BtnCalc1";
+            this.BtnCalc1.Size = new System.Drawing.Size(145, 48);
+            this.BtnCalc1.TabIndex = 18;
+            this.BtnCalc1.Text = "Calculate1";
+            this.BtnCalc1.UseVisualStyleBackColor = true;
+            this.BtnCalc1.Click += new System.EventHandler(this.BtnSell_Click);
             // 
             // TxtRemain
             // 
@@ -231,6 +234,7 @@ namespace CurrencyProjeForm
             this.TxtCurrenty.Name = "TxtCurrenty";
             this.TxtCurrenty.Size = new System.Drawing.Size(219, 30);
             this.TxtCurrenty.TabIndex = 11;
+            this.TxtCurrenty.TextChanged += new System.EventHandler(this.TxtCurrenty_TextChanged);
             // 
             // label9
             // 
@@ -251,6 +255,7 @@ namespace CurrencyProjeForm
             this.BtnGetDollars.TabIndex = 10;
             this.BtnGetDollars.Text = "...";
             this.BtnGetDollars.UseVisualStyleBackColor = true;
+            this.BtnGetDollars.Click += new System.EventHandler(this.BtnGetDollars_Click);
             // 
             // BtnSellDollars
             // 
@@ -260,6 +265,7 @@ namespace CurrencyProjeForm
             this.BtnSellDollars.TabIndex = 11;
             this.BtnSellDollars.Text = "...";
             this.BtnSellDollars.UseVisualStyleBackColor = true;
+            this.BtnSellDollars.Click += new System.EventHandler(this.BtnSellDollars_Click);
             // 
             // BtnGetEuro
             // 
@@ -269,6 +275,7 @@ namespace CurrencyProjeForm
             this.BtnGetEuro.TabIndex = 12;
             this.BtnGetEuro.Text = "...";
             this.BtnGetEuro.UseVisualStyleBackColor = true;
+            this.BtnGetEuro.Click += new System.EventHandler(this.BtnGetEuro_Click);
             // 
             // BtnSellEuro
             // 
@@ -278,6 +285,16 @@ namespace CurrencyProjeForm
             this.BtnSellEuro.TabIndex = 13;
             this.BtnSellEuro.Text = "...";
             this.BtnSellEuro.UseVisualStyleBackColor = true;
+            this.BtnSellEuro.Click += new System.EventHandler(this.BtnSellEuro_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(207, 215);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(145, 48);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Calculate2";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -323,7 +340,7 @@ namespace CurrencyProjeForm
         private System.Windows.Forms.Label LblGetEuro;
         private System.Windows.Forms.Label LblSellEuro;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button BtnSell;
+        private System.Windows.Forms.Button BtnCalc1;
         private System.Windows.Forms.TextBox TxtRemain;
         private System.Windows.Forms.TextBox TxtTotal;
         private System.Windows.Forms.Label label12;
@@ -336,6 +353,7 @@ namespace CurrencyProjeForm
         private System.Windows.Forms.Button BtnSellDollars;
         private System.Windows.Forms.Button BtnGetEuro;
         private System.Windows.Forms.Button BtnSellEuro;
+        private System.Windows.Forms.Button button1;
     }
 }
 
