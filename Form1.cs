@@ -70,5 +70,16 @@ namespace CurrencyProjeForm
         {
             TxtCurrenty.Text = TxtCurrenty.Text.Replace(".", ",");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            double currenty = Convert.ToDouble(TxtCurrenty.Text);
+            int amount = Convert.ToInt32(TxtAmount.Text);
+            int total = Convert.ToInt32(amount / currenty);
+            TxtTotal.Text = total.ToString();
+            int remainder;
+            remainder = amount % total;
+            TxtRemain.Text = remainder.ToString();
+        }
     }
 }
